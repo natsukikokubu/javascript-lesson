@@ -1,6 +1,6 @@
 // Q1
-let nickname = "なつき";
-let age = 26;
+const nickname = "なつき";
+const age = 26;
 console.log(`私のニックネームは${nickname}です。年齢は${age}です。`);
 
 // Q2
@@ -90,9 +90,58 @@ let returnValue = remainder(5, 3);
 console.log(`5を3で割った余りは${returnValue}です。`);
 
 //10
-function foo() {
-  let x = 1;
-}
-console.log(x);
+// function foo() {
+//   let x = 1;
+// }
+// console.log(x);
 //回答
 //スコープという変数の有効範囲によって、変数Xは関数fooの中でしか参照することができないから。
+
+//応用Q1
+let random = Math.floor(Math.random() * 11);
+console.log(random);
+
+//応用Q２
+let helloworld = function () {
+  console.log("Hello World!");
+};
+
+let messageTime = function () {
+  setTimeout(helloworld, 3000);
+};
+messageTime();
+
+//応用Q3
+let num = -2;
+if (num > 0) {
+  console.log("num is greater than 0");
+} else if (num < 0) {
+  console.log("num is less than 0");
+} else if (num === 0) {
+  console.log("num is 0");
+}
+
+//応用Q4
+let numbers = [];
+
+for (let i = 0; i < 100; i++) {
+  numbers.push(i);
+}
+
+console.log(numbers);
+
+//応用Q5
+const mixed = [4, "2", 5, "8", "9", 0, 1];
+for (let i = 0; i < mixed.length; i++) {
+  const value = mixed[i];
+
+  if (typeof value === "string") {
+    console.log("not number");
+  } else {
+    if (value % 2 === 0) {
+      console.log("even");
+    } else {
+      console.log("odd");
+    }
+  }
+}
